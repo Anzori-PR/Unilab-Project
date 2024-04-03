@@ -6,6 +6,9 @@
     --text-title-color: #424244;
     --text-color: #252525;
     --bg-color: #EAE9E9;
+    --button-hover: #C85100;
+    --book-background: #E0E0E0;
+    --main-bg-color: #F6F6F6;
 }
 
 * {
@@ -15,7 +18,33 @@
     font-family: "Roboto", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.fixed-colors {
+    color: var(--text-title-color);
+}
+
+.header-fixed {
+    background-color: var(--bg-color);
+}
+.user-default {
+    background-image: url(./images/User\(1\).png);
+}
+
+.user-scrolled {
+    background-image: url(./images/User.png);
+}
+
+
 /* ------------- Header ----------- */
+
 header {
     position: fixed;
     width: 100%;
@@ -29,10 +58,6 @@ header {
     z-index: 99;
 }
 
-.header-fixed {
-    background-color: var(--bg-color);
-    color: var(--text-title-color);
-}
 
 nav {
     width: 100%;
@@ -44,7 +69,8 @@ nav {
     align-items: center;
 }
 
-.logo h1{
+.logo a {
+    text-decoration: none;
     font-family: "Kalnia", serif;
     font-weight: 500;
     font-size: 48px;
@@ -63,9 +89,6 @@ menu {
     transition: background-color 0.3s ease;
 }
 
-.fixed-colors {
-    color: var(--text-title-color);
-}
 
 menu a {
     font-weight: 400;
@@ -81,37 +104,456 @@ menu .user {
     height: 40px;
 }
 
-.user-default {
-    background-image: url(./images/User\(1\).png);
-}
-
-.user-scrolled {
-    background-image: url(./images/User.png);
-}
 
 /* ----------- Main Section -------- */
 
 .main {
-    position: absolute;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  
+}
+
+.main-img {
+    width: 100%;
+    background-image: url(./images/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 0 170px;
     display: flex;
     justify-content: center;
-    padding: 0 170px;
+    align-items: center; 
 }
 
-.main img {
-    position: absolute;
-    top: 0;
-    max-width: 100%; 
-    height: auto; 
-}
 
 .main-text {
-    position: relative;
-    z-index: 99;
+    z-index: 98;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+}
+
+.main-text p {
+    color: white;
+    font-size: 40px;
+}
+
+.main-text h1 {
+    color: white;
+    letter-spacing: 10%;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.main-text button {
+    background-color: var(--button-color);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+
+    font-size: 24px;
+    color: white;
+}
+
+.main-text button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover);
+}
+
+/* -----------------  Services section ---------- */
+
+.services {
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 92px;
+}
+
+.services-container {
+    width: 100%;
+    max-width: 1580px;
+    margin-top: 60px;
+}
+
+.services-title h1 {
+    font-size: 40px;
+    color: var(--text-title-color);
+    margin-bottom: 20px;
+}
+
+.services-title p {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.seeAll {
+    display: flex;
+    justify-content: end;
+}
+
+.seeAll a {
+    color: #C85100;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* ------------ Services Cards ----------- */
+
+.services-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.first-card {
+    width: 40%;
+}
+
+.first-card-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.first-card h3 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.first-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* ------------ Video Section ----------- */
+
+.video-section {
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1580px;
+}
+
+.video-title h1 {
+    font-size: 40px;
+    color: var(--text-title-color);
+    margin-bottom: 40px;
+}
+
+.video video{
+    width: 100%;
+    max-width: 1580px;
+    border-radius: 40px;
+}
+
+/* ------------ Popular Tour Offers Section ------------ */
+
+.tour-offers-section {
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.tour-container {
+    width: 100%;
+    max-width: 1580px;
+    overflow: hidden;
+}
+
+.tour-title h1 {
+    font-size: 40px;
+    color: var(--text-title-color);
+    margin-bottom: 30px;
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.carousel :first-child {
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--text-title-color);
+}
+
+.carousel :last-child {
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    color: var(--text-title-color);
+}
+
+.carousel-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.6s ease;
+}
+
+.carousel-card {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 auto;
+}
+
+.carousel-card-img img{
+    width: 100%;
+}
+
+.carousel-card h3 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.carousel-card p {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+/* -------------- Blogs Section ------------- */
+.blogs-section {
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.blogs-container {
+    width: 100%;
+    max-width: 1580px;
+}
+
+.blogs-container h1{
+    font-size: 40px;
+    color: var(--text-title-color);
+    margin-bottom: 40px;
+}
+
+.blog-cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-cards {
+    width: 513px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blogs-img img {
+    width: 100%;
+}
+
+.blog-cards h3 {
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+/* ----------------- Tour Book Section ---------- */
+.book {
+    width: 100%;
+    padding: 50px 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--book-background);
+    margin-bottom: 60px;
+}
+
+.book-container {
+    width: 100%;
+    max-width: 1580px;
+}
+
+.book-container h1 {
+    font-size: 40px;
+    color: var(--text-title-color);
+    margin-bottom: 40px;
+}
+
+.book-input {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; 
+    margin-bottom: 40px;
+}
+
+.book-input select {
+    padding: 33px 50px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+.book-input select option {
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.book-container button {
+    width: 100%;
+    padding: 30px 0;
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--button-color);
+}
+
+.book-container button:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+/* --------------- Footer Section ----------- */
+
+footer {
+    width: 100%;
+    padding: 40px 170px 10px 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1580px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min-content;
+} 
+
+.first-section h1 {
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64.56px;
+    color: var(--text-title-color);
+}
+
+.first-section p {
+    font-size: 28px;
+    color: var(--text-title-color);
+}
+
+.first-section h3 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.second-section h5 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.second-section p {
+    font-size: 24px;
+    color: var(--text-title-color);
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.third-section .contact,
+.third-section .sub-news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 
+.third-section .contact h2{
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.third-section .contact p{
+    font-size: 24px;
+    color: var(--text-title-color);
+}
+
+.third-section .sub-news h2 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.third-section .sub-news input {
+    padding: 10px 13px;
+    border-radius: 10px;
+    border: 1px solid var(--text-title-color);
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.copyright p {
+    font-size: 24px;
+    color: var(--text-title-color);
 }
