@@ -35,11 +35,11 @@ body {
     background-color: var(--bg-color);
 }
 .user-default {
-    background-image: url(./images/User\(1\).png);
+    background-image: url(../data/images/user-icon/User\(1\).png);
 }
 
 .user-scrolled {
-    background-image: url(./images/User.png);
+    background-image: url(../data/images/user-icon/User.png);
 }
 
 
@@ -99,9 +99,40 @@ menu a {
     color: white;
 }
 
+menu a:hover {
+    color: var(--button-hover);
+}
+
 menu .user {
     width: 40px;
     height: 40px;
+    cursor: pointer;
+}
+
+#clickUserContainer {
+    position: absolute;
+    top: 120px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    display: none;
+}
+
+.clickUser {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+#clickUserContainer .clickUser a {
+    font-size: 24px;
+    color: var(--text-title-color);
+    padding: 5px 0px;
+    border-bottom: 1px solid var(--button-color);
+}
+
+#clickUserContainer .clickUser a:hover {
+    color: var(--button-hover);
 }
 
 
@@ -116,7 +147,7 @@ menu .user {
 
 .main-img {
     width: 100%;
-    background-image: url(./images/main.png);
+    background-image: url(../data/images/hero-bg-img/main.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -423,6 +454,7 @@ menu .user {
 .book-input select option {
     font-size: 28px;
     color: var(--text-color);
+    border-bottom: 2px solid gray;
 }
 
 .book-container button {

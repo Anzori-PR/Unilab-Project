@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --button-color: #FF6700;
+    --text-title-color: #424244;
+    --text-color: #252525;
+    --bg-color: #EAE9E9;
+    --button-hover: #C85100;
+    --book-background: #E0E0E0;
+    --main-bg-color: #F6F6F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+
+/* ------------- Header ----------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 105px;
+    background-color: var(--bg-color);
+    color: white;
+    padding: 20px 170px;
+    display: flex;
+    gap: 10px;
+    z-index: 99;
+}
+
+
+nav {
+    width: 100%;
+    max-width: 1580px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64.56px;
+    color: var(--text-title-color);
+}
+
+/* ------------ Header Menu -------- */
+
+menu {
+    width: 831px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 40px;
+    transition: background-color 0.3s ease;
+}
+
+menu .user {
+    width: 40px;
+    height: 40px;
+    background-image: url(../data/images/user-icon/User.png);
+    cursor: pointer;
+}
+
+#clickUserContainer {
+    position: absolute;
+    top: 120px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    display: none;
+}
+
+.clickUser {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+#clickUserContainer .clickUser a {
+    font-size: 24px;
+    color: var(--text-title-color);
+    padding: 5px 0px;
+    border-bottom: 1px solid var(--button-color);
+}
+
+#clickUserContainer .clickUser a:hover {
+    color: var(--button-hover);
+}
+
+/* --------------- Sign in section ------------------ */
+
+.sign-in-Section {
+    width: 100%;
+    padding: 0 170px;
+    display: flex;
+    justify-content: center;
+    margin-top: 231px;
+    margin-bottom: 156px;
+}
+
+.sign-in-container {
+    width: 100%;
+    max-width: 1580px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.sign-in {
+    background-color: white;
+    border-radius: 10px;
+    width: 540px;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs .email,
+.inputs .password {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs label {
+    font-size: 16px;
+    color: var(--text-title-color);
+    padding: 0 20px;
+    opacity: 70%;
+}
+
+.inputs .email input,
+.inputs .password input {
+    padding: 13.5px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    font-size: 20px;
+    color: var(--text-title-color);
+    font-weight: bold;
+    outline: none;
+}
+
+.inputs button {
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    padding: 13.5px 160px;
+    font-size: 20px;
+    color: white;
+}
+
+.inputs button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover);
+}
+
+.alternative {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.alternative p {
+    font-size: 16px;
+    color: var(--text-title-color);
+    opacity: 70%;
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+
+.alternative p::before,
+.alternative p::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--text-title-color);
+    opacity: 70%;
+}
+
+.alternative p::after {
+    margin: 10px 0 0 15px;
+}
+
+.alternative p::before {
+    margin: 10px 15px 0 0;
+}
+
+.alternative .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+.alternative .icons span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alternative .icons span img{
+    padding: 15px;
+}
+
+.terms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.terms .line {
+    width: 100%;
+    border-bottom: 1px solid var(--text-title-color);
+    opacity: 70%;
+}
+
+.terms p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-title-color);
+    opacity: 70%;
+}
+
+.terms p span {
+    color: var(--button-color);
+    cursor: pointer;
+}
+
+.terms p span strong {
+    color: var(--text-title-color);
+    font-weight: 400;
+}
+
+/* -------- Terms and policy pop Up */
+.popUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: white;
+    border-radius: 15px;
+    display: none;
+}
+
+.popUp h1 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--text-title-color);
+    margin-bottom: 20px;
+}
+
+.popUp p {
+    font-size: 18px;
+    color: var(--text-title-color);
+}
+
+.popUp button {
+    margin: 0 auto;
+    width: 400px;
+    padding: 14px 0;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popUp button:hover {
+    background-color: var(--button-hover);
+}
+
+/* --------------- Footer Section ----------- */
+
+footer {
+    width: 100%;
+    padding: 40px 170px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1580px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min-content;
+}
+
+.first-section h1 {
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 64.56px;
+    color: var(--text-title-color);
+}
+
+.first-section p {
+    font-size: 28px;
+    color: var(--text-title-color);
+}
+
+.first-section h3 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.second-section h5 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.second-section p {
+    font-size: 24px;
+    color: var(--text-title-color);
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.third-section .contact,
+.third-section .sub-news {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.third-section .contact h2 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.third-section .contact p {
+    font-size: 24px;
+    color: var(--text-title-color);
+}
+
+.third-section .sub-news h2 {
+    font-size: 32px;
+    color: var(--text-title-color);
+}
+
+.third-section .sub-news input {
+    padding: 10px 13px;
+    border-radius: 10px;
+    border: 1px solid var(--text-title-color);
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.copyright p {
+    font-size: 24px;
+    color: var(--text-title-color);
+}
