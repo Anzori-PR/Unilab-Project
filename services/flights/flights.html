@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="flights.css">
     <title>Flights</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -57,6 +59,140 @@
         </div>
     </section>
 
+    <section class="output-section">
+        <div class="output-container">
+            <div class="filter-container">
+                <div class="first-section">
+                    <li>Cheapest</li>
+                    <li>Quickest</li>
+                    <li>best</li>
+                </div>
+
+                <div class="second-section">
+                    <div class="stops">
+                        <div class="filter-titles">
+                            <h1>Stops</h1>
+                            <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                        </div>
+                        <div class="check-box">
+                            <span>
+                                <input id="direct" type="checkbox">
+                                <label for="direct">Direct</label>
+                            </span>
+
+                            <span>
+                                <input id="oneStop" type="checkbox">
+                                <label for="oneStop">One stop</label>
+                            </span>
+
+                            <span>
+                                <input id="twoStop" type="checkbox">
+                                <label for="twoStop">Two stop</label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="times">
+                        <div class="filter-titles">
+                            <h1>Times</h1>
+                            <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                        </div>
+                        <div class="range">
+                            <p>Take off - Tbilisi</p>
+                            <div class="range-times">
+                                <p>12:00</p>
+                                <p>24:00</p>
+                            </div>
+                            <div class="range-line"></div>
+                        </div>
+                        <div class="range">
+                            <p>Take off - Paris</p>
+                            <div class="range-times">
+                                <p>12:00</p>
+                                <p>24:00</p>
+                            </div>
+                            <div class="range-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="filter-titles">
+                        <h1>Airlines</h1>
+                        <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                    </div>
+
+                    <div class="filter-titles">
+                        <h1>Airports</h1>
+                        <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                    </div>
+
+                    <div class="duration">
+                        <div class="filter-titles">
+                            <h1>Duration</h1>
+                            <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                        </div>
+                        <div class="range">
+                            <div class="range-times">
+                                <p>7 Hours</p>
+                                <p>30 Hours</p>
+                            </div>
+                            <div class="range-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <div class="filter-titles">
+                            <h1>Price</h1>
+                            <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                        </div>
+                        <div class="range">
+                            <div class="range-times">
+                                <p>200$</p>
+                                <p>3000$</p>
+                            </div>
+                            <div class="range-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="price-calculator">
+                        <div class="filter-titles">
+                            <h1>Price-Calculator</h1>
+                            <img src="../../data/images/carousel-icons/down-chevron.png" alt="">
+                        </div>
+                        <div class="payment">
+                            <span>
+                                <img src="../../data/images/social-icons/credit-card.png" alt="">
+                                <p>Payment method</p>
+                            </span>
+                            <input type="text" placeholder="Choose payment method">
+                        </div>
+                        <div class="bag">
+                            <span>
+                                <img src="../../data/images/social-icons/bag.png" alt="Bag Icon">
+                                <p>Carry-on bag</p>
+                            </span>
+                            <input type="text" placeholder="Select bags (0)">
+                        </div>
+                        <div class="bag">
+                            <span>
+                                <img src="../../data/images/social-icons/bag.png" alt="Bag icon">
+                                <p>Checked bag</p>
+                            </span>
+                            <input type="text" placeholder="Select bags (0)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="output-cards">
+                <div class="flight-card">
+                    <!-- From Data -->
+                </div>
+
+                <button>Show more results</button>
+                
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <div class="footer-container">
@@ -97,6 +233,7 @@
         </div>
     </footer>
 
-    <script src="./flights.js"></script>
+    <script src="./flights.js" type="module"></script>
 </body>
+
 </html>
