@@ -1,4 +1,4 @@
-import { flightCard } from '../../data/home-db.js'
+import { flightCard } from '../../data/flight-db.js'
 
 // ----------- User Click
 const userIcon = document.getElementById('user');
@@ -18,7 +18,7 @@ flightCard.forEach((data) => {
     flight_card.innerHTML = `
         <div class="card">
             <div class="logo">
-                <img src="../../data/images/flight-card-img/image 7.png" alt="airlines logo">
+                <img src=${data.logo} alt="airlines logo">
                 <p>${data.name}</p>
             </div>
 
@@ -29,20 +29,20 @@ flightCard.forEach((data) => {
                         <p>Landing</p>
                     </div>
                     <div class="flight-range">
-                        <p>12:00</p>
+                        <p>${data.takeOff}</p>
                         <span class="line"></span>
-                        <p>19:00</p>
+                        <p>${data.landing}</p>
                     </div>
                 </div>
                 <div class="flight-duration">
-                    <p>7 Hours</p>
+                    <p>${data.duration}</p>
                 </div>
             </div>
 
             <div class="card-flight-price">
                 <div class="money">
                     <p>Price</p>
-                    <p>600$</p>
+                    <p>${data.price}</p>
                 </div>
                 <button>View Deal</button>
             </div>
@@ -50,3 +50,13 @@ flightCard.forEach((data) => {
     `
     container.appendChild(flight_card);
 });
+
+// ------------- Flight Search
+const flight_search_btn = document.getElementById('flight-search-btn');
+const output_container = document.querySelector('.output-section');
+const search_container = document.querySelector('.search');
+
+flight_search_btn.addEventListener('click', () => {
+    output_container.style.display = 'flex';
+    search_container.style.marginBottom = '0px';
+})

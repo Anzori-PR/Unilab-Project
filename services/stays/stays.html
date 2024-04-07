@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stays.css">
+    <title>Stays</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a id="logo-text" href="../../Home/index.html">ExploreEra</a>
+            </div>
+            <menu>
+                <a href="../../Home/index.html">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Blogs</a>
+                <a href="../../services/flights/flights.html">Our services</a>
+                <a href="#">Our offers</a>
+                <div class="user user-default" id="user"></div>
+                <div id="clickUserContainer">
+                    <div class="clickUser">
+                        <a href="../../sign_in/sign_in.html">Sign in</a>
+                        <a href="../../sign_up/sign_up.html">Sign up</a>
+                        <a href="#">Sign out</a>
+                    </div>
+                </div>
+            </menu>
+        </nav>
+    </header>
+
+    <section class="child-header">
+        <div class="child-header-container">
+            <a href="../flights/flights.html">Flights</a>
+            <a class="active" href="./stays.html">Stays</a>
+            <a href="#">Car rentals</a>
+            <a href="#">Cruises</a>
+            <a href="#">Attractions</a>
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="search-container">
+            <div class="search-inputs">
+                <input type="text" placeholder="Choose City">
+                <input type="datetime-local" placeholder="to Paris  &#9660;">
+                <input type="text" placeholder="2 Adults">
+                <button id="flight-search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="property">
+        <div class="property-container">
+            <h1>Browse by property type</h1>
+            <span>
+                <img class="prev-btn" src="../../data/images/carousel-icons/back.png" alt="back arrow">
+                <img class="next-btn" src="../../data/images/carousel-icons/next.png" alt="next arrow">
+            </span>
+            <div class="carousel">
+                <!-- Carousel data from js-->
+            </div>
+        </div>
+    </section>
+
+    <section class="output-section">
+        <div class="output-container">
+            <div class="filter-container">
+                <h1 class="filter-by">Filter by:</h1>
+                <div class="check-box-container">
+                    <h1>Property type</h1>
+                    <div class="check-box">
+                        <span>
+                            <input id="Hotel" type="checkbox">
+                            <label for="Hotel">Hotel</label>
+                        </span>
+
+                        <span>
+                            <input id="Apartment" type="checkbox">
+                            <label for="Apartment">Apartment</label>
+                        </span>
+
+                        <span>
+                            <input id="Villa" type="checkbox">
+                            <label for="Villa">Villa</label>
+                        </span>
+
+                        <span>
+                            <input id="Guest" type="checkbox">
+                            <label for="Guest">Guest house</label>
+                        </span>
+
+                        <span>
+                            <input id="Resort" type="checkbox">
+                            <label for="Resort">Resort</label>
+                        </span>
+
+                        <p>Show all 15</p>
+                    </div>
+                </div>
+
+                <div class="check-box-container">
+                    <h1>Property rating</h1>
+                    <div class="check-box">
+                        <span>
+                            <input id="5" type="checkbox">
+                            <label for="5">5 star</label>
+                        </span>
+
+                        <span>
+                            <input id="4" type="checkbox">
+                            <label for="4">4 star</label>
+                        </span>
+
+                        <span>
+                            <input id="3" type="checkbox">
+                            <label for="3">3 star</label>
+                        </span>
+
+                        <span>
+                            <input id="2" type="checkbox">
+                            <label for="2">2 star</label>
+                        </span>
+
+                        <span>
+                            <input id="Unrated" type="checkbox">
+                            <label for="Unrated">Unrated</label>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="check-box-container">
+                    <h1>Facilities</h1>
+                    <div class="check-box">
+                        <span>
+                            <input id="Wifi" type="checkbox">
+                            <label for="Wifi">Wifi</label>
+                        </span>
+
+                        <span>
+                            <input id="Parking" type="checkbox">
+                            <label for="Parking">Parking</label>
+                        </span>
+
+                        <span>
+                            <input id="Pets" type="checkbox">
+                            <label for="Pets">Pets allowed</label>
+                        </span>
+
+                        <span>
+                            <input id="Fitness" type="checkbox">
+                            <label for="Fitness">Fitness center</label>
+                        </span>
+
+                        <span>
+                            <input id="Swimming" type="checkbox">
+                            <label for="Swimming">Swimming pool</label>
+                        </span>
+
+                        <p>Show all 15</p>
+                    </div>
+                </div>
+
+                <div class="check-box-container">
+                    <h1>Property type</h1>
+                    <div class="check-box">
+                        <span>
+                            <input id="Balcony" type="checkbox">
+                            <label for="Balcony">Balcony</label>
+                        </span>
+
+                        <span>
+                            <input id="TV" type="checkbox">
+                            <label for="TV">TV</label>
+                        </span>
+
+                        <span>
+                            <input id="Kitchen" type="checkbox">
+                            <label for="Kitchen">Kitchen</label>
+                        </span>
+
+                        <span>
+                            <input id="Air" type="checkbox">
+                            <label for="Air">Air conditioning</label>
+                        </span>
+
+                        <span>
+                            <input id="Washing" type="checkbox">
+                            <label for="Washing">Washing machine</label>
+                        </span>
+
+                        <p>Show all 15</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output-cards">
+                <div class="sort">
+                    <h1>Auckland, New Zealand: 2000 properties found</h1>
+                    <select name="sort" id="sort">
+                        <option value="option1" selected>sort by: popular</option>
+                        <option value="option1">sort by: rating</option>
+                        <option value="option1">sort by: price</option>
+                    </select>
+                </div>
+
+                <div class="resort-section">
+                    <!-- From Data -->
+                </div>
+
+                <button>Show more results</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <div class="details-container">
+            <div class="filtered-sidebar">
+                <div class="sidebar-search">
+                    <h1>Searched by:</h1>
+
+                    <span>
+                        <label for="Destination">Destination</label>
+                        <input name="Destination" type="text" placeholder="Auckland, New Zealand ">
+                    </span>
+
+                    <span>
+                        <label for="Check">Check-in date</label>
+                        <input name="Check" type="text" placeholder="Thursday, February 1, 2024">
+                    </span>
+
+                    <span>
+                        <label for="out">Check-out date</label>
+                        <input name="out" type="text" placeholder="Friday, February 9, 2024">
+                    </span>
+
+                    <span>
+                        <label for="Persons">Persons</label>
+                        <input name="Persons" type="text" placeholder="2 Adults, 0 children, 1 room">
+                    </span>
+
+                    <label>Total 8 days</label>
+                </div>
+                <div class="map">
+                    <img src="../../data/images/map-img/map.png" alt="map">
+                </div>
+                <div class="list">
+                    <p>All the facilities:</p>
+                    <ul>
+                        <li>Private pool</li>
+                        <li>Terrace</li>
+                        <li>Kitchen</li>
+                        <li>1 Bedroom</li>
+                        <li>2 Bathrooms</li>
+                        <li>kids play space</li>
+                        <li>Billiard room</li>
+                        <li>Private gym</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- details From Data -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="first-section">
+                    <h1>ExploreEra</h1>
+                    <p>Travel agency which helps you to plan your perfect holidays</p>
+                    <h3>Follow us</h3>
+                    <div class="social-links">
+                        <img src="../../data/images/social-icons/Vector.png" alt="instagram">
+                        <img src="../../data/images/social-icons/Vector(1).png" alt="Facebook">
+                        <img src="../../data/images/social-icons/Vector(2).png" alt="Linkdin">
+                    </div>
+                </div>
+                <div class="second-section">
+                    <h5>Links</h5>
+                    <p>Home</p>
+                    <p>About us</p>
+                    <p>Blogs</p>
+                    <p>Our services</p>
+                    <p>Our offers</p>
+                </div>
+                <div class="third-section">
+                    <div class="contact">
+                        <h2>Contact us</h2>
+                        <p>exploreera@gmai.com</p>
+                        <p>555111222</p>
+                    </div>
+                    <div class="sub-news">
+                        <h2>Subscribe news</h2>
+                        <input type="text" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./stays.js" type="module"></script>
+</body>
+
+</html>

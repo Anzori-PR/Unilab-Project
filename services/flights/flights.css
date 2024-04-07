@@ -159,6 +159,10 @@ menu .user {
     border-radius: 20px;
 }
 
+.child-header-container .active:hover {
+    color: white;
+}
+
 /* --------------- Search Section ----------- */
 
 .search {
@@ -166,6 +170,7 @@ menu .user {
     padding: 0 170px;
     display: flex;
     justify-content: center;
+    margin-bottom: 300px;
 }
 
 .search-container {
@@ -226,10 +231,10 @@ menu .user {
 
 .output-section {
     width: 100%;
-    display: flex;
     justify-content: center;
     padding: 0 170px;
     margin: 60px 0;
+    display: none;
 }
 
 .output-container {
@@ -433,9 +438,14 @@ menu .user {
     background-color: var(--button-color);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.output-cards button:hover {
+        background-color: var(--button-hover);
 }
 
 .flight-card {
@@ -454,7 +464,6 @@ menu .user {
 }
 
 .card .logo {
-    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -465,6 +474,10 @@ menu .user {
 .card .logo img {
     width: 70px;
     height: 70px;
+}
+
+.card .logo p {
+    text-wrap: nowrap;
 }
 
 .card-flight-times {

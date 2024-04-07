@@ -1,3 +1,4 @@
+// Data for service images
 export const servicesData = [
     {
         img: "../data/images/services-img/image1.png",
@@ -101,71 +102,4 @@ export const blogsData = [
     },
 ];
 
-// Data for Flights
-export const flightCard = [
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    },
-    {
-        logo: '../data/images/flight-card-img/image 7.png',
-        name: 'Georgian Airlines',
-        takeOff: '12:00',
-        landing: '19:00',
-        duration: '7 Hours',
-        price: '600$'
-    }
-];
 
