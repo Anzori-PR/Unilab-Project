@@ -7,6 +7,7 @@ window.addEventListener('scroll', function () {
     let links = menu.querySelectorAll('a');
     let logo = document.getElementById('logo-text');
     let user = document.querySelector('.user');
+    let burger = this.document.querySelector('.burger');
     let scrollPosition = window.scrollY;
 
     if (scrollPosition > 0) {
@@ -17,6 +18,7 @@ window.addEventListener('scroll', function () {
         logo.classList.add('fixed-colors');
         user.classList.remove('user-default');
         user.classList.add('user-scrolled');
+        burger.classList.add('burger-scroll');
     } else {
         header.classList.remove('header-fixed');
         links.forEach(function (link) {
@@ -25,6 +27,7 @@ window.addEventListener('scroll', function () {
         logo.classList.remove('fixed-colors');
         user.classList.remove('user-scrolled');
         user.classList.add('user-default');
+        burger.classList.remove('burger-scroll');
     }
 });
 
@@ -36,6 +39,18 @@ userIcon.addEventListener('click', () => {
     clickUserCont.style.display = clickUserCont.style.display === 'block' ? 'none' : 'block';
 });
 
+// ------------ Burger Menu Click 
+const burger = document.querySelector('.burger');
+const burger_result = document.querySelector('.burger-output-container');
+const close = document.querySelector('.close');
+
+burger.addEventListener('click', () => {
+    burger_result.style.display = 'block'
+})
+
+close.addEventListener('click', () => {
+    burger_result.style.display = 'none'
+})
 
 // ----------- Carousel Logic
 document.addEventListener('DOMContentLoaded', function () {

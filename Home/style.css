@@ -34,6 +34,7 @@ body {
 .header-fixed {
     background-color: var(--bg-color);
 }
+
 .user-default {
     background-image: url(../data/images/user-icon/User\(1\).png);
 }
@@ -109,6 +110,14 @@ menu .user {
     cursor: pointer;
 }
 
+.burger {
+    display: none;
+}
+
+.burger-output-container {
+    display: none;
+}
+
 #clickUserContainer {
     position: absolute;
     top: 120px;
@@ -142,7 +151,7 @@ menu .user {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .main-img {
@@ -155,7 +164,7 @@ menu .user {
     padding: 0 170px;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 
@@ -163,6 +172,7 @@ menu .user {
     z-index: 98;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -241,7 +251,6 @@ menu .user {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -249,7 +258,7 @@ menu .user {
     width: 40%;
 }
 
-.first-card-img img{
+.first-card-img img {
     width: 100%;
     border-radius: 20px;
 }
@@ -287,7 +296,7 @@ menu .user {
     margin-bottom: 40px;
 }
 
-.video video{
+.video video {
     width: 100%;
     max-width: 1580px;
     border-radius: 40px;
@@ -354,7 +363,7 @@ menu .user {
     flex: 0 0 auto;
 }
 
-.carousel-card-img img{
+.carousel-card-img img {
     width: 100%;
 }
 
@@ -383,7 +392,7 @@ menu .user {
     max-width: 1580px;
 }
 
-.blogs-container h1{
+.blogs-container h1 {
     font-size: 40px;
     color: var(--text-title-color);
     margin-bottom: 40px;
@@ -393,18 +402,23 @@ menu .user {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .blog-cards {
-    width: 513px;
+    width: 32%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.blogs-img {
+    max-width: 100%;
+}
+
 .blogs-img img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .blog-cards h3 {
@@ -439,7 +453,7 @@ menu .user {
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px; 
+    gap: 40px;
     margin-bottom: 40px;
 }
 
@@ -495,7 +509,12 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+
+.footer-responsive {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .first-section {
@@ -503,7 +522,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     width: min-content;
-} 
+}
 
 .first-section h1 {
     font-family: "Kalnia", serif;
@@ -555,13 +574,14 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-} 
-.third-section .contact h2{
+}
+
+.third-section .contact h2 {
     font-size: 32px;
     color: var(--text-title-color);
 }
 
-.third-section .contact p{
+.third-section .contact p {
     font-size: 24px;
     color: var(--text-title-color);
 }
@@ -588,4 +608,737 @@ footer {
 .copyright p {
     font-size: 24px;
     color: var(--text-title-color);
+}
+
+
+/* -------------------------------------------- Responsive ----------------------------------- */
+
+/* Responsive Styles for Various Sections */
+
+@media screen and (max-width: 1580px) {
+    header {
+        padding: 20px 85px;
+    }
+
+    .logo a {
+        font-size: 36px;
+    }
+
+    menu {
+        width: auto;
+    }
+
+    menu a {
+        font-size: 20px;
+    }
+
+    /* Main Section */
+    .main-img {
+        padding: 0 85px;
+    }
+
+    .main-text h1 {
+        font-size: 48px;
+    }
+
+    .main-text p {
+        font-size: 28px;
+    }
+
+    .main-text button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 0 85px;
+    }
+
+    .services-card {
+        gap: 20px;
+    }
+
+    .first-card h3 {
+        font-size: 24px;
+    }
+
+    .first-card p {
+        font-size: 16px;
+    }
+
+    /* Video Section */
+    .video-section {
+        padding: 0 85px;
+    }
+
+    .video video {
+        border-radius: 20px;
+    }
+
+    /* Tour Offers Section */
+    .tour-offers-section {
+        padding: 0 85px;
+    }
+
+    .carousel-card {
+        width: 25%;
+    }
+
+    .carousel-card-container {
+        gap: 0px;
+    }
+
+    .carousel-card-img {
+        max-width: 95%;
+    }
+
+    .tour-title h1 {
+        font-size: 40px;
+    }
+
+    .carousel-card h3 {
+        font-size: 24px;
+    }
+
+    .carousel-card p {
+        font-size: 20px;
+    }
+
+    /* Blogs Section */
+    .blogs-section {
+        padding: 0 85px;
+    }
+
+    .blog-cards {
+        width: 32%;
+    }
+
+    .blog-cards-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .blogs-img img {
+        border-radius: 10px;
+    }
+
+    .blog-cards h3 {
+        font-size: 24px;
+    }
+
+    /* Tour Book Section */
+    .book {
+        padding: 50px 85px;
+    }
+
+    .book-container h1 {
+        font-size: 40px;
+    }
+
+    .book-input select {
+        padding: 25px 40px;
+        font-size: 20px;
+    }
+
+    .book-container button {
+        padding: 20px 0;
+        font-size: 24px;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 40px 85px 10px 85px;
+    }
+
+    .first-section h1 {
+        font-size: 32px;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 24px;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2 {
+        font-size: 24px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 18px;
+    }
+
+    .copyright p {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Header */
+    .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger-white.png);
+    }
+
+    .burger-scroll {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger.png);
+    }
+
+    .burger-output-container {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .burger-output {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 45px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .burger-output-container .close {
+        position: absolute;
+        background-image: url(../data/images/icons/close.png);
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        top: 15px;
+    }
+
+    .burger-output .burger-line {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+    }
+
+    .burger-output a {
+        color: black;
+    }
+
+    /* Header */
+
+    header {
+        padding: 10px 40px;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    menu {
+        display: none;
+    }
+
+    menu a {
+        font-size: 20px;
+    }
+
+    /* Main Section */
+    .main-img {
+        padding: 0 40px;
+    }
+
+    .main-text h1 {
+        font-size: 30px;
+    }
+
+    .main-text p {
+        font-size: 24px;
+    }
+
+    .main-text button {
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 0 40px;
+    }
+
+    .services-title h1 {
+        font-size: 32px;
+    }
+
+    .services-title p {
+        font-size: 20px;
+    }
+
+    .services-card {
+        gap: 20px;
+    }
+
+    .first-card h3 {
+        font-size: 24px;
+    }
+
+    .first-card p {
+        font-size: 16px;
+    }
+
+    /* Video Section */
+    .video-section {
+        padding: 0 40px;
+    }
+
+    .video-title h1 {
+        font-size: 40px;
+    }
+
+    .video video {
+        border-radius: 20px;
+    }
+
+    /* Tour Offers Section */
+    .tour-offers-section {
+        padding: 0 40px;
+    }
+
+    .carousel-card-container {
+        overflow-x: scroll;
+        scrollbar-width: none;
+        gap: 20px;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .carousel-card {
+        width: 45%;
+    }
+
+    .carousel-card-img {
+        max-width: 100%;
+    }
+
+    .tour-title h1 {
+        font-size: 40px;
+    }
+
+    .carousel-card h3 {
+        font-size: 20px;
+    }
+
+    .carousel-card p {
+        font-size: 18px;
+    }
+
+    /* Blogs Section */
+    .blogs-section {
+        padding: 0 40px;
+    }
+
+    .blogs-container h1 {
+        font-size: 40px;
+    }
+
+    .blog-cards {
+        width: 49%;
+    }
+
+    .services-card {
+        flex-wrap: wrap;
+    }
+
+    .first-card {
+        width: 48%;
+    }
+
+    .blog-cards-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .blogs-img img {
+        border-radius: 10px;
+    }
+
+    .blog-cards h3 {
+        font-size: 24px;
+    }
+
+    /* Tour Book Section */
+    .book {
+        padding: 50px 40px;
+    }
+
+    .book-container h1 {
+        font-size: 40px;
+    }
+
+    .book-input {
+        gap: 20px;
+    }
+
+    .book-input select {
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+
+    .book-input select option {
+        font-size: 20px;
+    }
+
+    .book-container button {
+        border-radius: 15px;
+        padding: 20px 0;
+        font-size: 22px;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 40px 40px 10px 40px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-responsive {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .first-section {
+        width: 50%;
+    }
+
+    .third-section {
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .contact {
+        width: 48%;
+    }
+
+    .first-section h1,
+    .first-section h3 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 28px;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2,
+    .second-section h5 {
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    .second-section p {
+        font-size: 20px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 20px;
+    }
+
+    .copyright p {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    .burger {
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger-white.png);
+    }
+
+    .burger-scroll {
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger.png);
+    }
+
+    header {
+        padding: 8px 45px;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    menu {
+        display: none;
+    }
+
+    menu a {
+        font-size: 18px;
+    }
+
+    /* Main Section */
+    .main-img {
+        padding: 0 45px;
+    }
+
+    .main-text h1 {
+        font-size: 24px;
+    }
+
+    .main-text p {
+        font-size: 16px;
+    }
+
+    .main-text button {
+        padding: 10px 25px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 0 45px;
+    }
+
+    .services-title h1 {
+        font-size: 22px;
+    }
+
+    .services-title p {
+        font-size: 14px;
+    }
+
+    .seeAll {
+        display: none;
+    }
+
+    .services-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-card h3 {
+        font-size: 20px;
+    }
+
+    .first-card p {
+        font-size: 16px;
+    }
+
+    .services-card {
+        flex-wrap: wrap;
+    }
+
+    .first-card {
+        width: 100%;
+    }
+
+    /* Video Section */
+    .video-section {
+        padding: 0 45px;
+    }
+
+    .video-title h1 {
+        font-size: 22px;
+    }
+
+    .video video {
+        border-radius: 20px;
+    }
+
+    /* Tour Offers Section */
+    .tour-offers-section {
+        padding: 0 40px;
+    }
+
+    .carousel-card-container {
+        overflow-x: scroll;
+        scrollbar-width: none;
+        gap: 20px;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .carousel-card {
+        width: 100%;
+    }
+
+    .carousel-card-img {
+        max-width: 100%;
+    }
+
+    .tour-title h1 {
+        font-size: 20px;
+    }
+
+    .carousel-card h3 {
+        font-size: 18px;
+    }
+
+    .carousel-card p {
+        font-size: 18px;
+    }
+
+    /* Blogs Section */
+    .blogs-section {
+        padding: 0 45px;
+    }
+
+    .blogs-container h1 {
+        font-size: 22px;
+    }
+
+    .blog-cards {
+        width: 100%;
+    }
+
+    .blog-cards-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .blogs-img img {
+        border-radius: 10px;
+    }
+
+    .blog-cards h3 {
+        font-size: 20px;
+    }
+
+    /* Tour Book Section */
+    .book {
+        padding: 50px 45px;
+    }
+
+    .book-container h1 {
+        font-size: 22px;
+    }
+
+    .book-input {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book-input select {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    .book-input select option {
+        font-size: 18px;
+    }
+
+    .book-container button {
+        border-radius: 15px;
+        padding: 20px 0;
+        font-size: 22px;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 40px 45px 10px 45px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-responsive {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-section {
+        width: 100%;
+    }
+
+    .first-section h1,
+    .first-section h3 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 28px;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2,
+    .second-section h5 {
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    .second-section p {
+        font-size: 20px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 20px;
+    }
+
+    .copyright p {
+        font-size: 24px;
+    }
 }
