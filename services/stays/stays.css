@@ -1554,6 +1554,10 @@ footer {
         scrollbar-width: none;
     }
 
+    .carousel-card img {
+        width: 300px;
+    }
+
     /* Output Container */
 
     .output-section {
@@ -1612,12 +1616,13 @@ footer {
     /* Resort Caard */
 
     .resort-card {
+        flex-direction: column;
         padding: 15px 20px;
     }
 
     .resort-card img {
         max-width: 100%;
-        width: 90%;
+        width: 100%;
     }
 
     .sort h1 {
@@ -1696,6 +1701,10 @@ footer {
         display: none;
     }
 
+    .imgs-container .down {
+        overflow: hidden;
+    }
+
     .buttons-container {
         flex-wrap: wrap;
         gap: 10px;
@@ -1731,6 +1740,7 @@ footer {
         width: 100%;
         gap: 20px;
     }
+
 
 
 
