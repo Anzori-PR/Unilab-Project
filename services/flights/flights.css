@@ -1247,6 +1247,10 @@ footer {
         gap: 0px;
     }
 
+    .card-flight-times {
+        gap: 0px;
+    }
+
     .card-flight-price button {
         width: 100%;
     }

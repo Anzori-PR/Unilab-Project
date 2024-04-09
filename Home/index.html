@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home default page whith multiple menues and content">
     <link rel="stylesheet" href="style.css">
     <title>ExploreEra</title>
 </head>
@@ -113,7 +114,8 @@
         <div class="book-container">
             <h1>Ready To Book A Trip?</h1>
             <div class="book-input">
-                <select id="dropdown" name="dropdown">
+                <label for="dropdown1"></label>
+                <select id="dropdown1" name="dropdown">
                     <option value="default" selected>Your starting location</option>
                     <option value="option1">Rome, Italy</option>
                     <option value="option2">Luxor City, Egypt</option>
@@ -125,7 +127,8 @@
                     <option value="option8">Hanauma, Hawaii</option>
                 </select>
 
-                <select id="dropdown" name="dropdown">
+                <label for="dropdown2"></label>
+                <select id="dropdown2" name="dropdown">
                     <option value="default" selected>Choose a tour offer</option>
                     <option value="option1">Adventure Tour</option>
                     <option value="option2">Cultural Immersion Tour</option>
@@ -133,14 +136,16 @@
                     <option value="option4">Culinary Tour</option>
                 </select>
 
-                <select id="dropdown" name="dropdown">
+                <label for="dropdown3"></label>
+                <select id="dropdown3" name="dropdown">
                     <option value="default" selected>Choose date</option>
                     <option value="option1">04/05/2024 - 04/10/2024</option>
                     <option value="option2">04/10/2024 - 04/15/2024</option>
                     <option value="option3">04/15/2024 - 04/20/2024</option>
                 </select>
 
-                <select id="dropdown" name="dropdown">
+                <label for="dropdown4"></label>
+                <select id="dropdown4" name="dropdown">
                     <option value="default" selected>Persons</option>
                     <option value="option1">1 - 3</option>
                     <option value="option2">3 - 6</option>
@@ -183,7 +188,8 @@
                     </div>
                     <div class="sub-news">
                         <h2>Subscribe news</h2>
-                        <input type="text" placeholder="Email">
+                        <label for="email"></label>
+                        <input id="email" type="text" placeholder="Email">
                     </div>
                 </div>
             </div>

@@ -457,6 +457,10 @@ menu .user {
     margin-bottom: 40px;
 }
 
+.book-input label {
+    display: none;
+}
+
 .book-input select {
     padding: 33px 50px;
     background-color: white;
