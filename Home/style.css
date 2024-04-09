@@ -793,6 +793,7 @@ footer {
         height: 20px;
         display: block;
         background-image: url(../data/images/icons/burger-white.png);
+        cursor: pointer;
     }
 
     .burger-scroll {
@@ -829,6 +830,7 @@ footer {
         height: 15px;
         right: 15px;
         top: 15px;
+        cursor: pointer;
     }
 
     .burger-output .burger-line {
@@ -839,6 +841,10 @@ footer {
 
     .burger-output a {
         color: black;
+    }
+
+    .burger-output a:hover {
+        color: var(--button-hover);
     }
 
     /* Header */
@@ -1089,6 +1095,7 @@ footer {
 
     /* Header */
     .burger {
+        position: relative;
         width: 30px;
         height: 20px;
         display: block;
@@ -1096,10 +1103,50 @@ footer {
     }
 
     .burger-scroll {
+        position: relative;
         width: 30px;
         height: 20px;
         display: block;
         background-image: url(../data/images/icons/burger.png);
+    }
+
+    .burger-output-container {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .burger-output {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 45px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .burger-output-container .close {
+        position: absolute;
+        background-image: url(../data/images/icons/close.png);
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .burger-output .burger-line {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+    }
+
+    .burger-output a {
+        color: black;
     }
 
     header {

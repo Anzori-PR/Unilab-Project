@@ -83,6 +83,14 @@ menu .user {
     cursor: pointer;
 }
 
+.burger {
+    display: none;
+}
+
+.burger-output-container {
+    display: none;
+}
+
 #clickUserContainer {
     position: absolute;
     top: 120px;
@@ -220,7 +228,7 @@ menu .user {
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
-} 
+}
 
 .alternative .icons span {
     display: flex;
@@ -231,7 +239,7 @@ menu .user {
     cursor: pointer;
 }
 
-.alternative .icons span img{
+.alternative .icons span img {
     padding: 15px;
 }
 
@@ -273,7 +281,7 @@ menu .user {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -335,6 +343,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-responsive {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .first-section {
@@ -428,4 +442,410 @@ footer {
 .copyright p {
     font-size: 24px;
     color: var(--text-title-color);
+}
+
+
+
+/* -------------------------------------------- Responsive ----------------------------------- */
+
+/* Responsive Styles for Various Sections */
+
+@media screen and (max-width: 1580px) {
+    header {
+        padding: 20px 85px;
+    }
+
+    .logo a {
+        font-size: 36px;
+    }
+
+    menu {
+        width: auto;
+    }
+
+    menu a {
+        font-size: 20px;
+    }
+
+
+
+    /* Footer Section */
+    footer {
+        padding: 40px 85px 10px 85px;
+    }
+
+    .first-section h1 {
+        font-size: 32px;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 24px;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2 {
+        font-size: 24px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 18px;
+    }
+
+    .copyright p {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Header */
+    .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger.png);
+        cursor: pointer;
+    }
+
+    .burger-output-container {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .burger-output {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 45px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .burger-output-container .close {
+        position: absolute;
+        background-image: url(../data/images/icons/close.png);
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .burger-output .burger-line {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+    }
+
+    .burger-output a {
+        color: black;
+    }
+
+    .burger-output a:hover {
+        color: var(--button-hover);
+    }
+
+    /* Header */
+
+    header {
+        padding: 10px 40px;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    menu {
+        display: none;
+    }
+
+    menu a {
+        font-size: 20px;
+    }
+
+
+    /* Footer Section */
+    footer {
+        padding: 40px 40px 10px 40px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-responsive {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .first-section {
+        width: 50%;
+    }
+
+    .third-section {
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .contact {
+        width: 48%;
+    }
+
+    .first-section h1,
+    .first-section h3 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 28px;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2,
+    .second-section h5 {
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    .second-section p {
+        font-size: 20px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 20px;
+    }
+
+    .copyright p {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    .burger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: block;
+        background-image: url(../data/images/icons/burger.png);
+    }
+
+    .burger-output-container {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        background-color: white;
+        border-radius: 12px;
+    }
+
+    .burger-output {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 45px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .burger-output-container .close {
+        position: absolute;
+        background-image: url(../data/images/icons/close.png);
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .burger-output .burger-line {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+    }
+
+    .burger-output a {
+        color: black;
+    }
+
+    header {
+        padding: 8px 45px;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    menu {
+        display: none;
+    }
+
+    menu a {
+        font-size: 18px;
+    }
+
+    /* Sign in form */
+
+    .sign-in-Section {
+        padding: 0 45px;
+    }
+
+    .sign-in {
+        width: 100%;
+        padding: 24px 30px;
+    }
+
+    .inputs label {
+        font-size: 14px;
+    }
+
+    .inputs .lastName input,
+    .inputs .firstName input,
+    .inputs .email input,
+    .inputs .password input {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .inputs button {
+        text-align: center;
+        padding: 15px 0;
+        font-size: 16px;
+    }
+
+
+    .alternative p {
+        font-size: 14px;
+    }
+
+
+    .alternative .icons span img {
+        padding: 10px;
+    }
+
+    .terms p {
+        font-size: 14px;
+    }
+
+    /* Pop up */
+
+    .popUp {
+        top: 60%;
+        width: 100%;
+        padding: 0px 45px;
+        gap: 40px;
+    }
+
+    .popUp h1 {
+        font-size: 20px;
+    }
+
+    .popUp p {
+        font-size: 16px;
+    }
+
+    .popUp button {
+        width: 100%;
+        padding: 14px 0;
+    }
+
+
+    /* Footer Section */
+    footer {
+        padding: 40px 45px 10px 45px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-responsive {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-section {
+        width: 100%;
+    }
+
+    .first-section h1,
+    .first-section h3 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .first-section p {
+        font-size: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .second-section h5 {
+        font-size: 28px;
+    }
+
+    .third-section {
+        width: 100%;
+    }
+
+    .third-section .contact h2,
+    .third-section .sub-news h2,
+    .second-section h5 {
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    .second-section p {
+        font-size: 20px;
+    }
+
+    .third-section .contact p,
+    .third-section .sub-news input {
+        font-size: 20px;
+    }
+
+    .copyright p {
+        font-size: 24px;
+    }
 }

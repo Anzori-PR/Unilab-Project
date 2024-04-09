@@ -6,6 +6,19 @@ userIcon.addEventListener('click', () => {
     clickUserCont.style.display = clickUserCont.style.display === 'block' ? 'none' : 'block';
 });
 
+// ------------ Burger Menu Click 
+const burger = document.querySelector('.burger');
+const burger_result = document.querySelector('.burger-output-container');
+const close = document.querySelector('.close');
+
+burger.addEventListener('click', () => {
+    burger_result.style.display = 'block'
+})
+
+close.addEventListener('click', () => {
+    burger_result.style.display = 'none'
+})
+
 // ----------- Terms and conditions pop Up
 
 const terms = document.getElementById('terms');

@@ -10,6 +10,18 @@ userIcon.addEventListener('click', () => {
 });
 
 
+// ------------ Burger Menu Click 
+const burger = document.querySelector('.burger');
+const burger_result = document.querySelector('.burger-output-container');
+const close = document.querySelector('.close');
+
+burger.addEventListener('click', () => {
+    burger_result.style.display = 'block'
+})
+
+close.addEventListener('click', () => {
+    burger_result.style.display = 'none'
+})
 
 // ------------- Resort Search
 const flight_search_btn = document.getElementById('flight-search-btn');
@@ -21,6 +33,33 @@ flight_search_btn.addEventListener('click', () => {
     property.style.display = 'none';
     output_section.style.display = 'flex';
 })
+
+// ------------ Filter Click
+const filter_click = document.getElementById('filter-click');
+const filter_container = document.querySelector('.filter-container');
+const output_cards = document.querySelector('.output-cards');
+const child_header = document.querySelector('.child-header');
+const filter_back = document.getElementById('filter-back');
+const search_container = document.querySelector('.search-container');
+
+filter_click.addEventListener('click', () => {
+
+    if (filter_container.style.display === 'flex') {
+        filter_container.style.display = 'none';
+        output_cards.style.display = 'flex';
+        search_container.style.display = 'flex';
+        child_header.style.display = 'flex';
+        filter_back.style.display = 'none';
+        filter_click.style.marginTop = '10px';
+    } else {
+        filter_container.style.display = 'flex';
+        filter_click.style.marginTop = '120px';
+        output_cards.style.display = 'none';
+        search_container.style.display = 'none';
+        child_header.style.display = 'none';
+        filter_back.style.display = 'block';
+    }
+});
 
 // ------------ Stays Carousel data fetch
 const carousel_container = document.querySelector('.carousel');
@@ -141,9 +180,17 @@ function showDetails() {
             <div class="details-desc">
                 <p>${data.description}</p>
             </div>
+            <p class="show-more">Show more</p>
         `
 
         details_container.appendChild(details_output);
+
+
+        const showMore = details_output.querySelector('.show-more');
+        const filtered_sidebar = document.querySelector('.filtered-sidebar');
+        showMore.addEventListener('click', () => {
+            filtered_sidebar.style.display = 'flex';
+        })
     })
 }
 
